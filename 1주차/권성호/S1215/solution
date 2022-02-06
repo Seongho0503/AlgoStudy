@@ -1,0 +1,96 @@
+import java.util.*;
+import java.io.*;
+
+ class Solution {
+static int n, m;
+	static String string, str;
+	static String[][] map = new String[8][8];
+	static StringTokenizer tk;
+	static int[] arr, reverse;
+	
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		n = Integer.parseInt(br.readLine());
+		
+		for(int i=0; i<8; i++) {
+			str = br.readLine();
+			for(int j=0; j<8; j++) {
+				map[i][j] = Character.toString(str.charAt(j));
+			}
+		}
+		
+
+		int[] xd = {-(n-1), n-1, 0, 0};
+		int[] yd = {0, 0, -(n-1), n-1};
+		ArrayList<String> save = new ArrayList<>();
+		HashSet<int[]> check = new HashSet<>();
+	
+		
+		for(int i=0; i<8; i++) {
+			for(int j=0; j<8; j++) {
+				//뽑기
+				//상하좌우의 끝자리 계산
+				for(int k=0; k<4; k++) {
+					int x = i+xd[k];
+					int y = j+yd[k];
+					
+					if(x>=0 && x<8 && y>=0 && y<8) {
+						
+						if(palindrome(i, j, x, y)==true) {
+							if(!check.contains(arr)) {//같은걸 읽은게 아닌가
+								save.add(string);
+								check.add(arr);
+								check.add(reverse);
+							}
+							
+						}
+					}
+				}
+			}
+		}
+		
+		System.out.println(save.size()/2);
+		
+	}
+	
+	public static boolean palindrome(int xf, int yf, int xl, int yl) {
+		string = "";
+		if(xf==xl) { 
+			if(yf<yl) { //우
+				for(int i=yf; i<=yl; i++) {
+					string += map[xf][i];
+				}
+				for(int i=0; i<n/2; i++) {
+					if(string.charAt(i) != string.charAt(n-1-i)) return false;
+				}
+			}else { //좌
+				for(int i=yl; i<=yf; i++) {
+					string += map[xf][i];
+				}
+				for(int i=0; i<n/2; i++) {
+					if(string.charAt(i) != string.charAt(n-1-i)) return false;
+				}
+			}
+		}else {
+			if(xf<xl) { //상
+				for(int i=xf; i<=xl; i++) {
+					string += map[i][yf];
+				}
+				for(int i=0; i<n/2; i++) {
+					if(string.charAt(i) != string.charAt(n-1-i)) return false;
+				}
+			}else { //하
+				for(int i=xl; i<=xf; i++) {
+					string += map[i][yf];
+				}
+				for(int i=0; i<n/2; i++) {
+					if(string.charAt(i) != string.charAt(n-1-i)) return false;
+				}
+			}
+		}
+		arr = new int[]{xf, yf, xl, yl};
+		reverse = new int[] {xl, yl, xf, yf};
+		return true;
+	}
+	
+	}
