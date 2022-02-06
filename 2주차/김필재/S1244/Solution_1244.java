@@ -93,11 +93,11 @@ public class Solution_1244 {
 					
 					// 현재 숫자를 뒤의 중복되는 큰 숫자들 중 어떤 위치의 숫자와 바꿀 지
 					// numbers:[3, 2, 8, 8, 8]
-					//			^
+					//	    ^
 					// index2:[2,3,4]
-					//			 ^
+					//	     ^
 					// max:[8, 8, 8, 3, 2]
-					//				 ^
+					//	         ^
 					for (int l : index2) {
 						if (max.get(l).equals(numbers.get(j)))
 							index = l;
