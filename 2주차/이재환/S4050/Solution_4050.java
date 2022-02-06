@@ -1,4 +1,3 @@
-package P4050;
 
 import java.io.BufferedReader;
 import java.io.IOException;
