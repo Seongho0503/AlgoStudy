@@ -1,4 +1,4 @@
-# AlgoStudy
+# AlgoStudy(1알1고)
 알고리즘 스터디입니다.
 
 <스터디 목표>
