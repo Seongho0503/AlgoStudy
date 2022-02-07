@@ -4,8 +4,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
+//232888
+//832888
 public class Solution {
+	static int N;
+	static int[] price;
+	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -16,50 +20,38 @@ public class Solution {
 			StringTokenizer st = new StringTokenizer(br.readLine()," ");
 			String str=st.nextToken();
 	
-			int n = Integer.parseInt(st.nextToken());			
-			int [] num=new int[6];
+			N = Integer.parseInt(st.nextToken());			
+			price=new int[6];
 			
 			for(int i=0;i<str.length();i++)  
-				num[i]=str.charAt(i)-'0';
+				price[i]=str.charAt(i)-'0';
 			
-			int max=num[0];
-			int temp;
-			int Mid=0;
-			int id=0;
-			for(int i=0;i<n;i++) {
-				for(int j=i+1;j<str.length();j++) {
-		
-					if(num[j]>=max){
-						max=num[j];
-						Mid=j;
-						if(num[j]==max)
-							id=j;
-					}
-				}
-				if(num[Mid]>=num[i]) {
-					if(Mid>id&&num[Mid]<num[id]) {
-					temp=num[i];
-					num[i]=num[Mid];
-					num[Mid]=temp;
-					}
-					else
-					{
-						temp=num[i];
-						num[i]=num[Mid];
-						num[Mid]=temp;
-						
-					}
-				}
-		
-			}
+			find_swap(0,0);
 			
 			for(int i=0;i<str.length();i++) 
-				ans+=num[i]*Math.pow(10,str.length()-1-i);
+				ans+=price[i]*Math.pow(10,str.length()-1-i);
 			
 			System.out.println("#" + t + " "+ans);
 		}
 
 		br.close();
 	}
+	//수업시간에 배운거로 한번 해보는중..
+	public static void find_swap(int cnt,int start) {
+			
+		// 기본 파트
+		if(cnt== N) {
+			return;
+		}
+			
+		for (int i = start; i < price.length; i++) {
+			for(int j=i+1; j<price.length;j++) {
+				
+				
+				
+			}
+		}
+	}
+
 }
 	
