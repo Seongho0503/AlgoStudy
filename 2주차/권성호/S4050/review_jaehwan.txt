@@ -1,0 +1,15 @@
+#55
+
+//오름차순
+list.sort(Comparator.naturalOrder());  / list.sort(null) 동일
+//내림차순
+list.sort(Comparator.reverseOrder());
+
+//컬렉션 타입 오름차순 
+Collections.sort(list, Collections.naturalOrder());
+//컬렉션 타입 내림차순 
+Collections.sort(list, Collections.reverseOrder());
+
+API 쓰는게 좋았음.
+나는 쓰려고 해도 잘안되더라고..
+정리할 겸 sort 관련 API 검색한 것 살짝 적어봤음
