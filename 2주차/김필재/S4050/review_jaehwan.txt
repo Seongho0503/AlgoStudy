@@ -1,0 +1,8 @@
+#17
+split 메모  
+str.split(" ", num);
+num 인자 넣으면 배열 크기도 정할 수 있다고 하네
+
+REVIEW
+다 더한 후 빼는 것도 괜찮네 
+항상 stringtokenizer만 써왔는데 split은 몰랐었는데 조금 찾아봤음.
