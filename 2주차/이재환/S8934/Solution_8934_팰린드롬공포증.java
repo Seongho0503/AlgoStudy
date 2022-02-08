@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//순열 배운걸로 완전검색해서 해봤는데 이클립스에서 결과 나오는데 
-//3번째 케이스 문자수가 많다보니 시간 초과 나오네
+//완전검색해서 해봤음
+//3번째 케이스 문자수가 많다보니 시간 초과 나오네 -> 이클립스에서는 결과 나오고, SWEA에서 시간초과 뜸
 //시간되면 다른방법으로도 풀어볼게
 
 public class Solution_8934_팰린드롬공포증{
