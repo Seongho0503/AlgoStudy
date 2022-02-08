@@ -1,0 +1,25 @@
+팰린드롬 방지하려면 제일 많은 알파벳 사이에 나머지 알파벳 두 개를 끼워 넣으면 된다.
+ex) aaaa bbb ccc
+- a(bc)a(bc)a(bc)a
+
+abc로 묶은 후 남는것 계산
+
+ex) aaa b c -> abc 빼면 aa
+- abaca(X)
+- abcaa(X)
+
+ex) aa b c -> abc 빼면 a
+- abca(O)
+
+ex) aa bb
+- abab(X)
+
+abc로 묶은 후 남는 수 : (제일 많은 알파벳 수 - 가장 적은 알파벳 수) , (두번째 많은 알파벳 수 - 가장 적은 알파벳 수)가 각각 1이하일 경우 성공
+ex) a b(O)
+ex) a(O)
+ex) b(O)
+
+(제일 많은 알파벳 수 - 가장 적은 알파벳 수) , (두번째 많은 알파벳 수 - 가장 적은 알파벳 수)가 각각 2이상일 경우 실패
+ex) aa bb(X)
+ex) aa(X)
+ex) bb(X)
