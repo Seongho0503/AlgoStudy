@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 //3번째 케이스 문자수가 많다보니 시간 초과 나오네
 //시간되면 다른방법으로도 풀어볼게
 
-public class Solution_8934{
+public class Solution_8934_팰린드롬공포증{
 	static char[] c,numbers;
 	static boolean[] isSelected;
 	static String ans;

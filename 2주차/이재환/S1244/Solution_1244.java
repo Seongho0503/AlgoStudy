@@ -1,4 +1,4 @@
-package myspace;
+package P1244;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,10 +17,7 @@ import java.util.StringTokenizer;
 112233 3
 456789 10
  */
-//이거 실행은 되고 테케 10개 다 똑바로 나오는데
-// 제출하면 테케 3개 틀렸다고 나오네
-// ㅜㅜ
-public class Solution {
+public class Solution_1244_최대상금 {
 	static int N;
 	static int[] price;
 	static int res;
