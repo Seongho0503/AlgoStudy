@@ -1,0 +1,7 @@
+하긴 매개변수가 너무 많은 느낌이긴 해..
+//static List<Integer> li= new ArrayList<>();
+//li.add(arr[index]);
+//li.remove(li.size()-1);
+세 개를 주석 해제하고 
+System.out.println("index: "+index+" current:"+current+" sum:"+sum+" arr: "+li);
+로 출력하면 배열 내부도 볼 수 있어
