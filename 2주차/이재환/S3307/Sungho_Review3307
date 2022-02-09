@@ -1,0 +1,14 @@
+나랑 접근법이 같음.
+하나 다른 점은 나는 최장길이 구하는 것을 static 매서드로 뺴서 함수를 만들었고
+재환이는 바로 했네.
+최장길이 구할 때	
+바깥 for문 
+for (int i = 1; i < N; i++) 난 이것을 괜히 0부터 시작했네 1부터 할 걸 
+
+하나 갑자기 궁금한건데
+ throws NumberFormatException, IOException 이거 해주면
+ br.close() 안 해도 문제없나??
+ 저거 안 해주면 원래 br에 밑줄 보통있는데 노란 경고가 안 뜨네?
+ 
+ 저 throw는 원래 br.readLine 때문에 뜨는 걸로 알고 있는데
+ br.close() 굳이 필요 없나??
