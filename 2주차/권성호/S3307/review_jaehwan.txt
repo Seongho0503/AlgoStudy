@@ -1,0 +1,17 @@
+나랑 접근법 비슷한 것 같아 
+//탐색 함수
+private static void searching(int i) {
+	for (int j = 0; j < i; j++) {
+		if(arr[j] < arr[i] && search[j] + 1 > search[i]) {
+			search[i] = search[j]+ 1;
+		}
+	}
+	//max는 static 멤버이기 때문에 함수 리턴타입을 void 로 해줌
+	max = search[i];
+}
+
+여기 부분에서 max =search[i] 이렇게 하는 덮어쓰기 되는거 아니야?
+진짜 맥스값이 다음 입력값때문에 묻힐수도 있을 거 같은데
+if(search[i]>max) max=search[i]; < 이거나
+max= Math.max(search[i],max); < 이거
+써줘야될듯? 
