@@ -1,0 +1,4 @@
+그러네 
+static String str로 선언하고
+함수 호출에서 편하게 사용하고 있어서
+중간코드에서 String str에서 String 을 빼야할 듯 감사감사
