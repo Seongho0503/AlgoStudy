@@ -1,0 +1,21 @@
+1.
+필재 코드들을 보면 대단한 장점은 
+문제에서 요구하는 개념들을 확실히 구현한다.
+완전탐색도 그렇고 이 문제 코드를 보면 모든 경우의 수를
+파악해 반례가 생기는 빈틈이 없다.
+cop[] 배열에 값을 초기화할 때 조금 더 간결하게 코드를 작성할 수 있는 규칙이나 원리를 적용하면 완벽할 거 같다.
+<저 방법이 틀렸다는 거 아님>
+
+2. 코드 바꿔본 것
+<필재코드 if ~else 문인데 조건이 여러개가 아닌데 (if가 많은경우) else가 필요했을까? 출력도 중복코드라 >
+if(count[comp[0]]-count[comp[2]]<=1&&count[comp[1]]-count[comp[2]]<=1)	
+				System.out.println("#"+(t+1)+" YES");
+			else
+				System.out.println("#"+(t+1)+" NO");
+        
+  <내가 바꿔본 코드 : 삼항연산자로 해봤음>      
+        
+     string que : YES, NO 저장
+        
+     String que = (count[comp[0]]-count[comp[2]]<=1&&count[comp[1]]-count[comp[2]]<=1) ?  "YES" : "NO";
+		 System.out.println("#"+(t+1)+ que);
