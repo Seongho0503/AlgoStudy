@@ -1,0 +1,4 @@
+max = search[i]; 
+맞네 이부분 조건넣어야 할듯
+막 덮어쓰기 하고 있었네 감사감사
+max= Math.max(search[i],max); 난 이거쓸래 떙큐
