@@ -3,9 +3,7 @@
  -> 근데 재귀 쓸거면 조합 한번 생각 해보는 것도 좋을 것 같아
  -> 9C7->9개 중 7개 뽑고 합 구해서 100이랑 일치하면 7개 LIST 리턴 이런느낌으로 
   
-	static void search(int[] input,int idx,int sum,int num) {
+static void search(int[] input,int idx,int sum,int num) {
   -> input은 고정된 상태로 쓰니까 전역변수로 선언해놓고 쓰면 될거 같아 
   -> static int[] input; / static void search(int idx,int sum,int num){}
 		
-  실행시간 궁금해서 백준에 한번 돌려봤는데 오류뜨네
-  다시 한번 확인해보면 좋을듯!
