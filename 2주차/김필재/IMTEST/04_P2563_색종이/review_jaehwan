@@ -1,0 +1,31 @@
+
+  //붙인 색종이 공간만큼 1로 만듬
+	static void check(int[][] arr, int a, int b) {
+		for(int i=b-1;i<b+9;i++) {
+			for(int j=a-1;j<a+9;j++) {
+        if(arr[i][j]==0){  <-- 0인 면을 1로 바꾸고  바꿀때 마다 체크카운트 증가해주면 
+            arr[i][j]=1;    -- 체크 카운트가 곧 넓이가 되서 넓이를 따로 안구해도 된다.				    
+             check_cnt++;
+      --> 여기서 체크 포인트 하나 넣으면
+           이 밑에 코드 다 생략할 수 있음
+      }
+		}
+	}
+  system.out.println(check_cnt);
+  --> 끝!
+  
+--------------------------------------------------
+  [생략되는 부분]
+  //넓이 구하기
+	static int sum(int[][] arr) {
+		int sum=0;
+		for(int i=0;i<100;i++) {
+			for(int j=0;j<100;j++) {
+				if(arr[i][j]==1)
+					sum++;
+			}
+		}
+		return sum;
+	}
+	
+}
