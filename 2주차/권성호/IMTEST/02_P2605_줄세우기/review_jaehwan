@@ -1,0 +1,17 @@
+
+		for(int i = 0 ; i < N ; i++) {
+			int plus = Integer.parseInt(st.nextToken());
+			//add(index, 값) 을 추가한다.  (값 = 이 문제에서는 몇 번째로 줄을 선 아이인지)
+			list.add(i-plus,i);  -
+		}
+    
+		//0번쨰(1번)->1번이 뽑은수 0번
+    //list.add(0-0,0)-> list[0]에 0을 넣음 
+    
+    //1번째 (2번) -> 2번이 뽑은 수 1번
+    //list.add(1-1,1)-> list[0]에 1을 넣음
+    
+    -->list.add(i-plus,i+1) -> i를 i+1 해주는게 맞을듯?
+    
+    --> 사소하게 꼬인것 같은데 위에서 말한 것처럼 index를 1로 잡고 다시 한번 구현해 보는 게 좋아보임
+    --> 백준사이트 오류뜸
