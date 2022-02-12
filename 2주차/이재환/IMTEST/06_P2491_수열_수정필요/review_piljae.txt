@@ -1,0 +1,11 @@
+n이 1일 경우에
+max = Math.max(max, len[i]);
+부분을 거치지 않아서 0으로 출력되는 문제가 있다.
+
+마지막에 
+max = Math.max(max, len[0])
+을 추가했을 때에도 통과되지 않는것으로 봐서 다른 반례도 있는 것 같지만
+
+for (int i = 0; i < N; i++)
+			max = Math.max(max, len[i]);
+이걸 추가하니 통과된다.
