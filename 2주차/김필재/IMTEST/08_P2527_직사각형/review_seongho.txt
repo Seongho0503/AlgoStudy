@@ -1,3 +1,13 @@
 서로 겹치는 문제는
 점 -> 선  -> 면 으로 가야하는 게 진리인 거 같음
 
+나는 디폴트를 a로 잡았음
+// 점(c)은 사각형 r1의 모든 꼭지점을 하나씩 매칭해서 확인 
+		if((row1 == row4 && col1 == col4) || (row2 == row3 && col1 == col4) || (row1 == row4 && col2 == col3) || (row2 == row3 && col2 == col3)) 
+			result = 'c';
+		// 선분(b)은 꼭지점 x,y중 하나는 맞고 하나는 다를 경우.
+		else if((row2 == row3 && col2 != col3) || (row1 == row4 && col2 != col3) || (row2 != row3 && col1 == col4) && (row1 != row4 && col1 == col4)) 
+			result = 'b';
+		// 안 겹칠 때(d)는 (첫번째 사각형을 기준으로) 두번째 사각형이 기준의 범위가 겹치지 않을 때.
+		else if(row2 < row3 || row4 < row1 || col2 < col3 || col4 < col1) 
+			result = 'd';
