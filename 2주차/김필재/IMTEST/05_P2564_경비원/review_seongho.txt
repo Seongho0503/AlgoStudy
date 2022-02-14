@@ -1,0 +1,21 @@
+store 클래스를 만들어 준 것이 굉장히 인상적이었음
+멤버필드 관리가 더 쉬워졌음
+나도 switch를 방향에 따라 나눠주었지만
+반례 처리를 굉장히 잘했다
+
+		for (int i = 0; i < n+1; i++) {
+			int a=Math.abs(myidx-st[i].idx);
+			int b1=(num1*2)+(num2*2)-myidx+st[i].idx;
+			int b2=(num1*2)+(num2*2)-st[i].idx+myidx;
+			int b;
+			if(b1<b2)
+				b=b1;
+			else 
+				b=b2;
+			if(a<b)
+				st[i].dis=a;
+			else
+				st[i].dis=b;
+			result+=st[i].dis;
+			//System.out.println("idx: "+st[i].idx+" dis:"+st[i].dis );
+		}
