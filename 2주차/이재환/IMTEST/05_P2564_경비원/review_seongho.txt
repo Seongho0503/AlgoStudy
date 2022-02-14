@@ -1,3 +1,29 @@
 Math.min(Math.abs(stores[i]-len),2*M+2*N-Math.abs(stores[i]-len))
 필재랑 나나 재환이랑 이 문제 접근법은 같으나 재환이가 api 활용을 적재적소하게 잘 이용한다
 방향별로  dic을 나눠서 케이스별로 잘 구분했다
+
+
+	if(dir==1) stores[i]=pos;
+			else if(dir==2) stores[i]=M+N+M-pos;
+			else if(dir==3) stores[i]=M+N+M+N-pos;
+			else if(dir==4) stores[i]=M+pos;	
+		}
+		int len=0;
+		st = new StringTokenizer(br.readLine());
+		int dir=Integer.parseInt(st.nextToken());
+		int pos=Integer.parseInt(st.nextToken());
+		if(dir==1) len=pos;
+		else if(dir==2) len=M+N+M-pos;
+		else if(dir==3) len=M+N+M+N-pos;
+		else if(dir==4) len=M+pos;	
+		
+    
+    if(dir) 부분들이 계속 반복되는 구간이 2번 있으니 함수로 바깥으로 빼서 구현해도 괜찮을듯
+    
+    void direcase (int len) {
+    if(dir==1) len=pos;
+		else if(dir==2) len=M+N+M-pos;
+		else if(dir==3) len=M+N+M+N-pos;
+		else if(dir==4) len=M+pos;	
+    
+    }
