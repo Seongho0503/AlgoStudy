@@ -1,0 +1,3 @@
+Math.min(Math.abs(stores[i]-len),2*M+2*N-Math.abs(stores[i]-len))
+필재랑 나나 재환이랑 이 문제 접근법은 같으나 재환이가 api 활용을 적재적소하게 잘 이용한다
+방향별로  dic을 나눠서 케이스별로 잘 구분했다
