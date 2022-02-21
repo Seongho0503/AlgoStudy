@@ -45,7 +45,7 @@ public class Solution_2628 {
 		
 
 		//종이조각 넓이 = X점선 간의 거리 *각 Y점선 간의 거리
-		//넓이 최댓값 저장
+		//넓이 중 최댓값 구하기
 		int area = 0;
 		for (int i = 0; i < X.size() - 1; i++)
 			for (int j = 0; j < Y.size() - 1; j++)
