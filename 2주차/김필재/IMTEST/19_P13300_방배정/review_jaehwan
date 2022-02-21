@@ -1,18 +1,15 @@
-		// 필재가 짠것
-					if(a[i][j]%k!=0)
-						sum+=1;
-					sum+=a[i][j]/k;
+// 필재가 짠것
+if(a[i][j]%k!=0)
+	sum+=1;
+sum+=a[i][j]/k;
           
           
-      //내가 짠것    
-          if(list[s][grade]%K==0)
-					ans+=list[s][grade]/K;
-				else
-					ans+=(list[s][grade]/K+1);
+//내가 짠것    
+if(list[s][grade]%K==0)
+	ans+=list[s][grade]/K;
+else
+	ans+=(list[s][grade]/K+1);
           
-          
-          --> 표현은 다르지만 같은 의미
-          
-          
-          접근법 같음
+ --> 표현은 다르지만 같은 의미
+      접근법 같음
           
