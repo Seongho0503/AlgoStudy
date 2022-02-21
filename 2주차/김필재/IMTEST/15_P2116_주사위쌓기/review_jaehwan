@@ -12,3 +12,7 @@ sum+=Integer.parseInt(Collections.max(tempList));
 
 이유가 있었네
 ㅜ-ㅜ
+
+list하고 재귀 적절하게 써서 잘 풀은듯
+
+나도 다시 푼다
