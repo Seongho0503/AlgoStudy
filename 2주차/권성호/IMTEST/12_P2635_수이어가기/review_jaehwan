@@ -1,0 +1,27 @@
+
+		for(int i = 0; i <= N; i++) {      <<이 부분에서 두번째 수 구할 때 전체 탐색해도 시간이 얼마 안걸리지만
+                                         더 줄여보고자 한다면 i=N/2;i<=N; 이렇게 해도 좋을듯!
+			int first = N, second = i;	
+			//앞의 앞의 수, 앞의 수
+			int count = 0;
+	
+  
+  while(first >= second) {	
+				//first - second가 음수가 나올때까지 반복
+				int tmp = first - second;
+				first = second;
+				second = tmp;
+				count++;
+			}
+			if(max < count) {	
+				//최대 길이 갱신 및 그때의 두번째 숫자를 저장
+				max = count;
+				maxNum = i;
+			}
+		}
+    
+    //while문으로 깔끔하게 최대count와 두번째 수를 잘 구한것 같음
+    //나는 왜 재귀를 썼을까..? 한창 재귀 배울때라 그랬나본데 ㅎㅎ;
+    //시간 고려하면 성호 방법이 더 효율적인것 같음
+    
+   전체적으로 깔끔하게 잘 푼 것 같다!
