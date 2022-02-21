@@ -5,9 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-
-//최장수열 한것처럼 해봤는데 테케는 다 통과하거든?
-//백준 사이트를 통과하지못하네 ㅠ 반례가 있나본데.. 계속 바꿔보는중 
 public class Solution_2491 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -39,7 +36,9 @@ public class Solution_2491 {
 				len[i + 1] = len[i] + 1;
 			max = Math.max(max, len[i]);
 		}
-
+		for (int i = 0; i < N; i++)
+			max = Math.max(max, len[i]);
+	
 		System.out.println(max);
 
 	}
