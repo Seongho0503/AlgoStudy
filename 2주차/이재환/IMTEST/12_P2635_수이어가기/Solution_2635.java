@@ -16,7 +16,7 @@ public class Solution_2635 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		//첫번째 수 입력
+		//첫 번째 수 입력
 		int First= Integer.parseInt(br.readLine());
 		
 		queue = new LinkedList<>();
