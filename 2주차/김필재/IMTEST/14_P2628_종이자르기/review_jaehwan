@@ -1,0 +1,12 @@
+
+		List<Integer> a0=new ArrayList<Integer>();//0 : 가로로 자를 위치들
+		List<Integer> a1=new ArrayList<Integer>();//1 : 세로로 자를 위치들
+
+		//자를 위치 0에 가까운 순으로 정렬 - 자를 때 한줄씩 밀어내므로
+    Collections.sort(a0);
+		Collections.sort(a1);
+    
+    여기서 
+    굳이 자르는 연산 하지말고 점선들간의 간격 = 사각형 한변의 길이라고 생각해보면 더 쉽게 풀릴 수 있음
+    a0에서 구할수 있는 간격들, a1에서 구할 수 있는 간격들 적절히 조합해서 넓이 구하고
+    그 중에서 최댓값 선택하면 답임
