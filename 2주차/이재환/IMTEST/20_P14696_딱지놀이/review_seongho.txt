@@ -1,0 +1,41 @@
+딱지 승패 등급 나누는 거 효율적으로 잘 짰다.
+<재환> : 출력을 마지막에 한번만 함
+<성호> : 출력 도배 , 또 하나 나 도랐나봐 D출력하는 거 else로 하면되지... 바보같이 마지막에 조건 다 넣어줬네? else 생활화!!
+
+팀원 코드리뷰를 하면서 내 코드를 다시보는
+
+<재환>
+//딱지 갯수 비교
+			char ans='0';
+			for(int k=4;k>0;k--) {
+				if(A[k]>B[k]) {
+					ans='A';
+					break;
+				}
+				else if(A[k]<B[k]) {
+					ans='B';
+					break;
+				}
+				ans='D';
+			}
+
+			System.out.println(ans);	
+      
+      
+      
+    <나>
+      for(int i=3; i>=0; i--) {
+				if(cards[0][i] > cards[1][i]) {
+					System.out.println("A");
+					break;
+				}else if (cards[0][i] < cards[1][i]) {
+					System.out.println("B");
+					break;
+				}else if (cards[0][0] == cards[1][0] && i==0) {
+					System.out.println("D");					
+					break;
+				}
+				
+			}
+
+
