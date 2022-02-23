@@ -1,0 +1,45 @@
+필재 저 
+ if (arr[i][j] == 'o') 이 부분을 for문 밖으로 빼면 시간이 조금 단축되더라고
+ 어차피 배열 요소가 o 동그라미일 때 8방 탐색 해야하니깐
+ if문을 밖으로 뻈음
+ 둘 다 테케는 통과임
+ 
+ 또 삼항 연산자 하나 밑에 써봤음
+ 나 삼항연산자 엄청 좋아함
+
+<필재코드>
+// 모든 위치에 대하여 체크 실행
+			for (int i = 0; i < n; i++) {
+				for (int j = 0; j < n; j++) {
+					// 8방향에 대해서 실행
+					
+					for (int k = 0; k < 8; k++) {
+          if (arr[i][j] == 'o')
+							check(k, i, j, 1);
+					}
+				}
+        
+<내가 바꿔본 코드> : 시간 살짝 단축
+
+// 모든 위치에 대하여 체크 실행
+			for (int i = 0; i < n; i++) {
+				for (int j = 0; j < n; j++) {
+					// 8방향에 대해서 실행
+					if (arr[i][j] == 'o')
+					for (int k = 0; k < 8; k++) {
+							check(k, i, j, 1);
+					}
+				}
+      
+      <필재>
+        
+        System.out.print("#" + (t + 1));
+			if (check) {
+				System.out.println(" YES");
+			} else {
+				System.out.println(" NO");
+			}
+      
+      <내가 바꿔본 코드> : 삼항연산자
+     System.out.print(check ? "YES" : "NO")
+      
