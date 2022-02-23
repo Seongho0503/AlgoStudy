@@ -30,12 +30,22 @@ x 기준점이 달라져서 원하는 결과가 안 나올 수 있음
   
   
   <나>
-  for (int d = 0; d < 8; d++) {
+rivate static void check(int y, int x) {
+		for (int d = 0; d < 8; d++) {
 			cnt = 1;
 			int nx = x;
 			int ny = y;
 			while(true) {
 				nx=nx+dx[d];
+				ny=ny+dy[d];
+				
+				if(ny<0||nx<0||ny>=N||nx>=N||map[ny][nx]!='o') break;	
+				
+				cnt++;
+				if(cnt==5) ans=1;
+			}
+		}
+	}
 				
 <재환>	
 static int N, ans, cnt;
