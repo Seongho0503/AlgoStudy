@@ -1,0 +1,44 @@
+여기 테케에서는 잘 돌아가지만
+탐색할 때
+재환 너 코드에서 x 값을 계속 변경시켜주면 
+oooxx
+4번째에서 x가 틀렸을 때 다른 방향으로 바꿔줘야 하는데
+x 기준점이 달라져서 원하는 결과가 안 나올 수 있음
+-> 즉, x를 건들면 안 되고 다른 변수에 담아서 써야 함
+기준점(방향 탐색할 시작점)은 x를 변경시키면 안 됨
+  
+  <재환>
+  private static void check(int y, int x) {
+		for (int d = 0; d < 8; d++) {
+			cnt = 1;
+			while(true) {
+				int nx=x+dx[d];
+				int ny=y+dy[d];
+				
+				if(ny<0||nx<0||ny>=N||nx>=N||map[ny][nx]!='o') break;	
+				
+				cnt++;
+				x=nx;
+				y=ny;
+				if(cnt==5) ans=1;
+			}
+		}
+	}
+  
+  
+  <나>
+  for (int d = 0; d < 8; d++) {
+			cnt = 1;
+			int nx = x;
+			int ny = y;
+			while(true) {
+				nx=nx+dx[d];
+				ny=ny+dy[d];
+				
+				if(ny<0||nx<0||ny>=N||nx>=N||map[ny][nx]!='o') break;	
+				
+				cnt++;
+				if(cnt==5) ans=1;
+			}
+		}
+	}
