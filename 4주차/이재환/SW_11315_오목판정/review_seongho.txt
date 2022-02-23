@@ -6,6 +6,9 @@ oooxx
 x 기준점이 달라져서 원하는 결과가 안 나올 수 있음
 -> 즉, x를 건들면 안 되고 다른 변수에 담아서 써야 함
 기준점(방향 탐색할 시작점)은 x를 변경시키면 안 됨
+
+
+또 밑에 출력 삼항연산자 적어봤어
   
   <재환>
   private static void check(int y, int x) {
@@ -33,6 +36,20 @@ x 기준점이 달라져서 원하는 결과가 안 나올 수 있음
 			int ny = y;
 			while(true) {
 				nx=nx+dx[d];
+				
+<재환>	
+static int N, ans, cnt;
+ans = 0;
+if(ans == 1)
+	sb.append("YES");
+else
+	sb.append("NO");
+							
+				
+ <내가 바꿔본 코드>
+ boolean ans = false;  -> for문 안에서 한줄 되면 true로 바꾸고
+ System.out.print(ans ? "YES" : "NO") // 출력
+      
 				ny=ny+dy[d];
 				
 				if(ny<0||nx<0||ny>=N||nx>=N||map[ny][nx]!='o') break;	
