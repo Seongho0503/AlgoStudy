@@ -40,6 +40,10 @@
 				System.out.println(" NO");
 			}
       
-      <내가 바꿔본 코드> : 삼항연산자
-     System.out.print(check ? "YES" : "NO")
+2.<내가 바꿔본 코드> : 삼항연산자
+System.out.print(check ? "YES" : "NO")
+
+
+3. check 재귀로 풀었네. 이 방법도 매우 좋다. 방향만 하나씩 증가시켜서 다시 체크돌려주는 거
+good
       
