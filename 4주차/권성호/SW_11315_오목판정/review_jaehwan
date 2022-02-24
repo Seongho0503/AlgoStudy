@@ -1,0 +1,15 @@
+8방 체크로 빙고를 찾음
+loof로 한번에 종료하는게 인상적
+
+if (nx < 0 || ny < 0 || nx >= N || ny >= N) {
+  break;
+} else if (map[nx][ny] != 'o') {
+  break;
+}
+--> if (nx < 0 || ny < 0 || nx >= N || ny >= N ||map[nx][ny] != 'o') break;
+이렇게 해도 될듯?
+
+나도 ? yes:no 이거 주로 써야겠다
+나는 항상 if else로 줄줄줄 썼는데
+
+
