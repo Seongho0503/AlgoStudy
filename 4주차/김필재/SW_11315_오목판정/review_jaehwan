@@ -1,0 +1,22 @@
+		// 다음 값이 배열 범위 안에 있는지
+		if (i + dx[direction] >= 0 && i + dx[direction] < n && j + dy[direction] >= 0 && j + dy[direction] < n) {
+			// 다음 값이 o일때 체크
+			if (arr[i + dx[direction]][j + dy[direction]] == 'o')
+				check(direction, i + dx[direction], j + dy[direction], num + 1);
+			else
+				return;
+-----------------------------------------------------        
+   ㅋㅋㅋㅋ nx ny 사용 추천!
+  int nx=i+dx[direction];
+  int ny=j+dy[direction];
+  if(nx>=0 &&nx<n && ny>=0&& ny<n){
+  if(arr[nx][ny]=='o')
+    check(direction,nx,ny,num+1);
+  else
+    return;
+    
+    
+ 필재 재귀함수 쓰는게 진짜 능숙한 것 같아 
+ 나는 while문으로 뻉뻉이 돌렸는데
+ 재귀함수로 다시 한번 풀어봐야겠네
+ 
