@@ -7,6 +7,48 @@
 배열을 102?정도로 늘려놓고
 
 0~101 * 0~101 
-이사이즈에서 0,101 속한부분 0으로 채우고 하는건 어떰?
-오류 나오려나?
+이사이즈에서 0,101 속한부분 0으로 채우고 하면 좀더 최적화 가능할 것 같아
+밑에 코드 참고
 
+
+
+public class Solution_2567_pil {
+	public static void main(String[] args) throws IOException {
+		BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+
+		int arr[][] = new int[102][102];      <--------------- 원래 이렇게 넓혀놨는데..?
+		int testcase = Integer.parseInt(rd.readLine());
+		for (int i = 0; i < testcase; i++) {
+			String input[] = rd.readLine().split(" ");
+			check(arr, Integer.parseInt(input[0]), Integer.parseInt(input[1]));
+		}
+		System.out.println(sum(arr));
+	}
+
+	static void check(int[][] arr, int a, int b) {
+		for (int i = b - 1; i < b + 9; i++) {
+			for (int j = a - 1; j < a + 9; j++) {
+				arr[i + 1][j + 1] = 1;
+			}
+		}
+	}
+
+	static int sum(int[][] arr) {
+		int sum = 0;
+		for (int i = 0; i < 100; i++) {
+			for (int j = 0; j < 100; j++) {
+				//색종이 꼭지점
+				if (arr[i][j] == 1 && ((arr[i - 1][j] == 0 && arr[i][j - 1] == 0)
+						|| (arr[i - 1][j] == 0 && arr[i][j + 1] == 0) || (arr[i + 1][j] == 0 && arr[i][j + 1] == 0)
+						|| (arr[i + 1][j] == 0 && arr[i][j - 1] == 0)))
+					sum += 2;
+				//색종이 가장자리
+				else if (arr[i][j] == 1
+						&& (arr[i][j + 1] == 0 || arr[i][j - 1] == 0 || arr[i + 1][j] == 0 || arr[i - 1][j] == 0))
+					sum++;
+			}
+			// System.out.println();
+		}
+		return sum;
+	}
+}
