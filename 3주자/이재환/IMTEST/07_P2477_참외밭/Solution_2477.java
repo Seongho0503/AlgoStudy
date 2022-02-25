@@ -34,7 +34,7 @@ public class Solution_2477 {
 			}
 		}
 		
-		//true : [ㄱ 모양] / false : [ㄱ 대칭모양]
+		//true : [ㄱ 모양] / false : [ㄱ 대칭모양]  -->대칭이라기 보다는 가로가 기냐 세로가 기냐? 이거를 고르는 행위
 		boolean order = false; 
 		
 		// (5,0)과 같은 순서로 긴변이 나오는 경우 모양 체크
