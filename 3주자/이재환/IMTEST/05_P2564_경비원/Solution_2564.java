@@ -6,7 +6,49 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+//수정 코드
 public class Solution_2564 {
+	static int M;
+	static int N;
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		M = Integer.parseInt(st.nextToken());
+		N =Integer.parseInt(st.nextToken());
+		int S =Integer.parseInt(br.readLine());
+		int[] stores = new int[S]; 
+		for (int i = 0; i < S; i++) {
+			st = new StringTokenizer(br.readLine());
+			int dir = Integer.parseInt(st.nextToken());
+			int pos = Integer.parseInt(st.nextToken());	
+			stores[i]=length(dir,pos);	
+		}
+		
+		st = new StringTokenizer(br.readLine());
+		int dir=Integer.parseInt(st.nextToken());
+		int pos=Integer.parseInt(st.nextToken());
+		int len=length(dir,pos);
+		
+		int sum=0;
+		for (int i = 0; i < S; i++) 
+			sum+=Math.min(Math.abs(stores[i]-len),2*M+2*N-Math.abs(stores[i]-len));
+	
+		System.out.println(sum);
+	}
+	
+	public static int length(int dir,int pos) {
+		int len=0;
+		if(dir==1) len=pos;
+		else if(dir==2) len=M+N+M-pos;
+		else if(dir==3) len=M+N+M+N-pos;
+		else if(dir==4) len=M+pos;
+		return len;	
+	}
+}
+
+
+//처음 코드
+/*public class Solution_2564 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -40,4 +82,4 @@ public class Solution_2564 {
 		System.out.println(sum);
 
 	}
-}
+}*/
