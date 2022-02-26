@@ -1,0 +1,5 @@
+실행 흐름을 파악하기 쉽게 되어있는 것 같다. 배열을 사용해서 메모리 사용이 적은 장점이 있다.
+int index =whereIndex(num1, num2);
+char 타입의 숫자 두 개를 합친 숫자를 int로 저장하는 부분은 
+int index =Integer.parseInt(""+num1+num2);
+이렇게 하면 간단하게 할 수 있을 것 같다.
