@@ -13,32 +13,23 @@ public class Solution_2559 {
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
-	
-		int[] temp = new int[N];
+
 		Queue<Integer> queue = new LinkedList<Integer>();
 		st = new StringTokenizer(br.readLine(), " ");
 
-		for(int i=0;i<N;i++)
-			temp[i]=Integer.parseInt(st.nextToken());
-		int max=Integer.MIN_VALUE;
-	
-		
-		int sum=0;
-		for(int i=0;i<K;i++) {
-			sum+=temp[i];
-			queue.offer(temp[i]);
-		}
+		int sum = 0;
+		int max = Integer.MIN_VALUE;
 
-		max=Math.max(sum, max);
-		
-		for(int i=K;i<N;i++) {
-			sum-=queue.poll();
-			queue.offer(temp[i]);
-			sum+=temp[i];
-			
-			max=Math.max(sum, max);
+		for (int i = 0; i < N; i++) {
+			int temp = Integer.parseInt(st.nextToken());
+			queue.offer(temp);
+			sum += temp;
+			if (!queue.isEmpty() && queue.size() == K) {
+				max = Math.max(sum, max);
+				sum -= queue.poll();
+			}
+
 		}
-							
 		System.out.println(max);
 
 	}
