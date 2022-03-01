@@ -1,0 +1,37 @@
+보통은 4개의 문자와 13개카드를 보고
+2차원 배열을 쉽게 떠오르게 되는데
+필재의 풀이법을 보고 인상적이었점은
+Hashmap, Hashset 자료구조를 활용을 잘하고 문제를 정확하게 이해하였다. 굿굿굿
+앞으로 배열말고도 다양한 자료구조를 활용해봐야겠다.
+
+1. 질문
+
+약간 이 느낌으로 접근한건가?
+HashMap = id, 비번 저장소(DB)
+HashSet =  로그인 실제 구현 창 (DB에 있는 정보를(인덱스=비번) get으로 가져와 배열에 담기 
+
+2. 질문(리스펙)
+size  변수 활용하는 거 보고 소름 돋음. 진짜
+HashSet이 중복을 피한다는건 누구나 개념을 알고있지만
+필재는 자료구조 활용을 진짜 잘한다
+
+size = set[idx].size();
+set[idx].add((input.charAt(i + 1)) + "" + input.charAt(i + 2));
+if (size == set[idx].size()) {
+     System.out.println("ERROR");
+     break;
+     }
+
+처음에 size와 add했을 때 size가 같다면 (=HashSet 중복으로 이미 있는 원소이니) 
+에러뜨게 한다.
+멋있다.
+(+ 이건 작은 부탁?? 주석에 약간의 설명 조금만 써줬으면 이런거)
+
+3. 질문
+이클립스에서 
+
+- ArrayList is a raw type. References to generic type ArrayList<e> should be parameterized
+- List is a raw type. References to generic type List<e> should be parameterized
+warning이 떠서 찾아봤는데 객체타입이 정해지지 않아서 워닝이 떠서
+앞에도 객체 타입을 써주면 더 안전할 거 같다.
+Map <Character, Integer> map = new HashMap<Character, Integer>();
