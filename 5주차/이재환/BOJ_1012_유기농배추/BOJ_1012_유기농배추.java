@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+
+//메모리 : 13796KB
+//시간 : 108ms
 public class BOJ_1012_유기농배추 {
 	static int farm[][];
 	static int N,M,K;
