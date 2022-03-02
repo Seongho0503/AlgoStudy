@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 //메모리 : 11528KB
-//시간 : 80
+//시간 : 80ms
 public class BOJ_1003_피보나치함수 {
 	static int count[];
 
