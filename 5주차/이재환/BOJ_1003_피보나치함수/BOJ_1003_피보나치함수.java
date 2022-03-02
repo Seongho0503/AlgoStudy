@@ -13,7 +13,8 @@ public class BOJ_1003_피보나치함수 {
 		for (int t = 1; t <= tc; t++) {
 			StringBuilder sb = new StringBuilder();
 			int N = Integer.parseInt(br.readLine());
-			count = new int[2];
+			//count[0]==> 0의 갯수/count[1] ==> 1의 갯수
+			count = new int[2]; 
 			fibonacci(N);
 			sb.append(count[0]).append(" ").append(count[1]);
 			System.out.println(sb);
@@ -34,6 +35,7 @@ public class BOJ_1003_피보나치함수 {
 			return;
 		}else {
 			//메모이제이션 기법으로 재귀함수를 for문으로 바꿔주니 시간초과가 안났음
+			//Dynamaic Programming공부의 필요성 느낌
 			for(int i=1;i<n;i++) {
 				temp= t0+t1;
 				t0=t1;
