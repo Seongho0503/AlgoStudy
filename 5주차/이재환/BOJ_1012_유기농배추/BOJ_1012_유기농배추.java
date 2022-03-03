@@ -69,7 +69,7 @@ public class BOJ_1012_유기농배추 {
 		}
 	}
 	
-	//BFS-->무난한 bfs 문제
+	//BFS-->4방 탐색을 이용하는 bfs
 	static void bfs(CO start) {
 		Queue<CO> queue = new LinkedList<>();
 		queue.offer(start);
