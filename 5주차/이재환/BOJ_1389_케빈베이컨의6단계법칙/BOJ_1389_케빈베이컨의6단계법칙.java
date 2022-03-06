@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+//플로이드 와샬 방법으로 풀면 더 간단할거 같은데 
+//bfs dfs 공부중이라 bfs로 풀어봤음
+
 //메모리 : 11976KB,  시간: 96ms
 public class BOJ_1389_케빈베이컨의6단계법칙 {
 	static int N,M;
