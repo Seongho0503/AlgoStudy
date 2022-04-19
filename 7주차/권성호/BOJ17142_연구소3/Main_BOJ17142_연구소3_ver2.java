@@ -59,7 +59,7 @@ public class Main_BOJ17142_연구소3_ver2 {
         }
         ans = Integer.MAX_VALUE;
         
-        if (emptySpace == 0) {
+        if (empty == 0) {
             System.out.println(0);
         } else {
             combination(0, 0);
@@ -76,7 +76,7 @@ public class Main_BOJ17142_연구소3_ver2 {
     // 조합 : 바이러스 M개 뽑기
     static void combination(int start, int cnt) {
         if (cnt == M) {
-            bfs(emptySpace);
+            bfs(empty);
         } else {
             for (int i = start; i < viruses.size(); i++) {          //ex)  5개 3개 묶는다면 /////  ///  /// /// 3가지
                // 바이러스 리스트에서 하나씩 뽑아 M개되면 bfs돌림 (조합)
@@ -88,7 +88,7 @@ public class Main_BOJ17142_연구소3_ver2 {
     
 
     // M개 뽑은 바이러스 퍼뜨리기
-    static void bfs(int emptySpace) {
+    static void bfs(int empty) {
         Queue<Virus> q = new LinkedList<>();
         boolean[][] visited = new boolean[N][N];
 
