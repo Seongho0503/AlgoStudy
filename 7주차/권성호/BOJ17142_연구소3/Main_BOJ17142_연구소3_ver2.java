@@ -28,7 +28,7 @@ public class Main_BOJ17142_연구소3_ver2 {
         }
     }
 
-    static int N, M, ans, emptySpace;
+    static int N, M, ans, empty;
     static int[][] map;
     // 바이러스 관리 리스트 
     static ArrayList<Virus> viruses;
@@ -44,13 +44,13 @@ public class Main_BOJ17142_연구소3_ver2 {
         map = new int[N][N];
         active = new Virus[M];
         viruses = new ArrayList<>();
-        emptySpace = 0;
+        empty = 0;
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
                 if (map[i][j] == 0) {
-                    emptySpace++;
+                    empty++;
                 } else if (map[i][j] == 2) {
                 	   // (바이러스 x좌표 , y좌표, 걸린시간)
                     viruses.add(new Virus(i, j, 0));
@@ -109,9 +109,9 @@ public class Main_BOJ17142_연구소3_ver2 {
                 if(map[nx][ny] == 1) continue; // 벽인 경우
 
                 if (map[nx][ny] == 0) {
-                    emptySpace--;
+                    empty--;
                 }
-                if (emptySpace == 0) {
+                if (empty == 0) {
                     ans = Math.min(ans, now.time + 1);
                     return;
                 }
