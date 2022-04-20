@@ -1,4 +1,4 @@
-
+// 메모리 : 192512 kb  시간 : 392 ms
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
