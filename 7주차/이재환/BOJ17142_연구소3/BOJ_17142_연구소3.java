@@ -7,6 +7,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+//Gold 4
+//메모리:39364KB 시간:196ms
 public class BOJ_17142_연구소3 {
 	static int N,M;
 	static int map[][];
